@@ -7,6 +7,7 @@ import {
   BsFillCalendarPlusFill,
   BsFillCalendarMinusFill,
 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 type Updates = UpdatesAnimation[];
 interface UpdatesAnimation {
@@ -25,6 +26,7 @@ interface Update {
 function HomePage() {
   const [updates, setUpdates] = useState<Updates>([]);
   const [isAscend, setIsAscend] = useState<boolean>(true);
+  
   useEffect(() => {
     const getRecentAnimation = async () => {
       const res = await fetch(`${baseUrl}/anime/bangumi/updates`);
@@ -72,7 +74,13 @@ function HomePage() {
                       alt={animation.title}
                       className="animation-cover"
                     />
-                    <div className="animation-name">{animation.title}</div>
+                    <div className="animation-name">
+                      <Link
+                        to={`/search/${decodeURIComponent(animation.title)}`}
+                      >
+                        {animation.title}
+                      </Link>
+                    </div>
                   </div>
                 ))}
               </div>
