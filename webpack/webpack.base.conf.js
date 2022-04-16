@@ -18,6 +18,7 @@ const baseConfig = {
     filename: '[name].bundle.js', // 出口文件名
     clean: true,  // 重构是否清空dist文件夹
     pathinfo: false, // 开启路径信息
+    publicPath: '/' // 防止刷新后404
   },
   module: {
     // 加载css, less
