@@ -1,0 +1,38 @@
+.xxl-header-container {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(224, 224, 224, 0.66);
+  position: sticky;
+  top: 0px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(214, 214, 214, 0.171);
+  z-index: 100;
+}
+
+.xxl-logo-area {
+  flex: 1;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  & .App-logo {
+    height: 60px;
+    width: 60px;
+    margin-left: 20px;
+  }
+}
+
+.xxl-button-area {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  & > * {
+    margin-right: 16px;
+    cursor: pointer;
+  }
+}
+
+.website-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
