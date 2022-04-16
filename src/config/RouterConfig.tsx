@@ -4,6 +4,7 @@ import useBreakPoint from "tohsaka888-use-breakpoint";
 import Header from "../components/Header";
 import { BreakpointContext } from "../Context/BreakpointContext";
 import HomePage from "../pages/HomePage";
+import Search from "../pages/Search/Index";
 
 function RouterConfig() {
   const { deferedSize, deferedWidth } = useBreakPoint();
@@ -15,6 +16,7 @@ function RouterConfig() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="search/:name" element={<Search />} />
         </Routes>
       </BrowserRouter>
     </BreakpointContext.Provider>
