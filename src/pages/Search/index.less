@@ -1,5 +1,7 @@
 .search-header {
   font-size: 1.5rem;
+  margin-left: 15vw;
+  margin-top: 16px;
   & .search-result {
     font-weight: bolder;
     color: tomato;
@@ -10,4 +12,66 @@
 .search-content {
   width: 100%;
   height: 100%;
+}
+
+.cover-image {
+  width: 180px;
+  min-width: 180px;
+  aspect-ratio: 1/1.4;
+  border-radius: 10px;
+  margin-right: 16px;
+}
+
+.search-item {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.search-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  & span {
+    color: tomato;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-left: 8px;
+  }
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  & span {
+    color: rgb(56, 83, 205);
+    font-weight: bold;
+    margin-left: 8px;
+  }
+}
+
+.source {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  & span {
+    color: black;
+    font-weight: bold;
+    margin-left: 8px;
+  }
+}
+
+.description {
+  align-items: center;
+  font-size: 1rem;
+  & span {
+    color: black;
+    font-weight: bold;
+    margin-left: 8px;
+  }
 }
