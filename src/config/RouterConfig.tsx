@@ -12,8 +12,8 @@ function RouterConfig() {
     <BreakpointContext.Provider
       value={{ breakpoint: deferedWidth, size: deferedSize }}
     >
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="search/:name" element={<Search />} />
