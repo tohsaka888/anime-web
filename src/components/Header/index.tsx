@@ -8,13 +8,16 @@ import {
   BsPerson,
   BsPersonFill,
 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Header() {
   const { size } = useContext(BreakpointContext);
   return (
     <div className={`${size}-header-container`}>
       <div className={`${size}-logo-area`}>
-        <img src={logo} className="App-logo" alt="logo" />
+        <Link to={"/"}>
+          <img src={logo} className="App-logo" alt="logo" />
+        </Link>
         <div className="website-name">React Animation</div>
       </div>
       <div className={`${size}-input-area`}></div>
