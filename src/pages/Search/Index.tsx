@@ -7,6 +7,10 @@ import Result from "./Result";
 function Search() {
   const { name } = useParams();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <div className="search-header">
