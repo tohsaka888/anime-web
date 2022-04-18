@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Content from "../../components/Content";
 import { baseUrl } from "../../config/baseUrl";
 import "./index.less";
@@ -18,6 +18,7 @@ function Result() {
   const { name } = useParams();
   const [results, setResults] = useState<AnimationResults>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const navigate = useNavigate();
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
@@ -47,7 +48,14 @@ function Result() {
                   className="cover-image"
                 />
                 <div>
-                  <div className="search-name">{result.title}</div>
+                  <div
+                    className="search-name"
+                    onClick={() =>
+                      navigate(`/animation/${result.url.split("/").pop()}`)
+                    }
+                  >
+                    {result.title}
+                  </div>
                   <div className="category">
                     分类:<span>{result.category || "暂无分类"}</span>
                   </div>
