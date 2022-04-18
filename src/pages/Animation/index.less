@@ -1,0 +1,72 @@
+.playlist {
+  display: block;
+}
+
+.simple-button {
+  padding: 2px 8px;
+  margin-right: 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f9f9f9;
+  padding-bottom: 3px;
+}
+
+.simple-button:hover {
+  color: tomato;
+}
+
+.playlist-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  border-bottom: 1px solid #cecece;
+  padding-bottom: 8px;
+}
+
+.playlist-selector {
+  flex: 1;
+  margin-left: 8px;
+  // background-color: #ffffff;
+  box-shadow: 0px 0px 10px 3px #cecece;
+  padding: 0px 8px;
+  overflow: auto;
+  aspect-ratio: 1;
+}
+
+.info {
+  display: flex;
+  flex: 1;
+  & .cover {
+    margin-top: 8px;
+    width: 185px;
+    aspect-ratio: 1/ 1.4;
+    margin-right: 8px;
+    min-width: 185px;
+  }
+}
+
+.text-area {
+  // background-color: white;
+  box-shadow: 0px 0px 5px 5px #ebebeb;
+  padding: 8px;
+  margin-top: 8px;
+  // border-radius: 10px;
+  & .animation-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  & .animation-description {
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+  & .animation-tag {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #999999;
+  }
+  & .animation-source {
+    font-size: 1.2rem;
+    color: tomato;
+    font-weight: bold;
+  }
+}
