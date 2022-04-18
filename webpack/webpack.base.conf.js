@@ -31,6 +31,10 @@ const baseConfig = {
         test: /\.less$/,
         // 顺序不能错, css-loader 必须在 postcss-loader 和 less-loader 之前
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader'],
+      },{
+        test: /\.sass$/,
+        // 顺序不能错, css-loader 必须在 postcss-loader 和 sass-loader 之前
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
       }, {
         // 将所有的jsx文件使用babel编译
         test: /\.jsx$/,
